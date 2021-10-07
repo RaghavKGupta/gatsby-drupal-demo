@@ -6,5 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-drupal",
+      options: {
+        baseUrl: "https://dev-demo-cwig-gatsby.pantheonsite.io",
+        // preview: true
+      },
+    },
+  ],
 }
